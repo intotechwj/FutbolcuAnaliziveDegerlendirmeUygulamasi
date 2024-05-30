@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:login_register_app/pages/first_page.dart';
 import 'package:login_register_app/pages/profile.dart';
 import 'package:login_register_app/pages/second_page.dart';
+import 'package:login_register_app/pages/third_page.dart';
 
 import '../services/auth_service.dart';
 class HomePage extends StatelessWidget {
@@ -11,7 +12,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => DefaultTabController(
-      length: 2,
+      length: 3,
       child:  Scaffold(
       appBar: AppBar(
         automaticallyImplyLeading: false,
@@ -32,10 +33,11 @@ class HomePage extends StatelessWidget {
               )
           ],
         centerTitle: true,
-        bottom: TabBar(
+        bottom: const TabBar(
             tabs: [
             Tab(text: 'Bolum 1'),
             Tab(text: 'Bolum 2'),
+            Tab(text: 'Bolum 3'),
             ],
         ),
       ),
@@ -43,6 +45,7 @@ class HomePage extends StatelessWidget {
           children: [
             FirstPage(),
             SecondPage(),
+            ThirdPage(),
           ],
         )
     ),
